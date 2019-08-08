@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IOT-LoRa</title>
+		<link rel="stylesheet" href="styles/commonStyle.css">
+		<link rel="stylesheet" href="styles/styles0.css" id="stylesheet">
+		<script type="text/javascript" src="scripts/util.js"></script>
+		<script type="text/javascript" src="scripts/styles.js"></script>
+		<script type="text/javascript" src="scripts/loadingScreen.js"></script>
+		<script type="text/javascript" src="scripts/home.js"></script>
+		<script type="text/javascript" src="scripts/datamap.js"></script>
+		<script type="text/javascript" src="scripts/sensors.js"></script>
+		<script type="text/javascript" src="scripts/about.js"></script>
+		<link rel="shortcut icon" href="imgs/iconStyle0.png" type="image/x-icon" id="pageicon">
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<a target="_blank" rel="noopener noreferrer" href="https://www.polytech-lille.fr/">
+				<img src="imgs/PolytechStyle0.png" class="header_in" id="polytechLogo" />
+			</a>
+			<a target="_blank" rel="noopener noreferrer" href="http://portal.ptit.edu.vn/">
+				<img src="imgs/PTITStyle0.png" class="header_in" id="PTITLogo" />
+			</a>
+			<a class="header_in header_text_link" href="#" onclick="changeToHomePage();" id="headerHome">HOME</a>
+			<a class="header_in header_text_link" href="#" onclick="changeToDatamapPage();" id="headerDatamap">DATAMAP</a>
+			<a class="header_in header_text_link" href="#" onclick="changeToSensorsPage();" id="headerSensors">SENSORS</a>
+			<a class="header_in header_text_link" href="#" onclick="changeToAboutPage();" id="headerAbout">ABOUT</a>
+		</header>
+		
+		<!-- Side panel -->
+		<div id="sidenav"></div>
+		
+		<!-- Center panel -->
+		<article id="centerPanel"></article>
+		
+		<!-- Loading screen -->
+		<div class="cover_all" id="loading_screen_cover">
+			<div class="center" id="loading_screen_0" style="display: none;">
+				<div id="loading_bar" class="inline_block">
+					<div id="loading_bar_in"></div>
+					<div id="loading_bar_mask">
+						<div id="loading_bar_element_holder">
+							<div class="loading_bar_element"></div>
+						</div>
+					</div>
+				</div>
+				<p class="bold small_margin_top" id="loading_text">
+					SYSTEM INITIALIZING
+				</p>
+			</div>
+			<div class="center" id="loading_screen_1" style="display: none;">
+				<div id="loading_bar" class="inline_block">
+					<div id="loading_bar_in"></div>
+					<div id="loading_bar_mask">
+						<div id="loading_bar_element_holder">
+							<div class="loading_bar_element"></div>
+						</div>
+					</div>
+				</div>
+				<p class="bold small_margin_top" id="loading_text">
+					SYSTEM INITIALIZING
+				</p>
+			</div>
+			<div class="center" id="loading_screen_2" style="display: none;">
+				<div id="loading_bar">
+					<div id="loading_star_under_big"></div>
+					<div id="loading_star_under_small"></div>
+					<div id="loading_star_div" class="inline_block">
+						<div id="loading_star_cover"></div>
+					</div>
+				</div>
+				<p class="bold small_margin_top" id="loading_text">
+					SYSTEM INITIALIZING
+				</p>
+			</div>
+		</div>
+		
+		<!-- Footer -->
+		<footer>
+			<p class="footer_in">
+				Database client for IOT-LoRa - Version 1.0.0 - By Pierre Frison - 2019
+			</p>
+		</footer>
+	</body>
+</html>

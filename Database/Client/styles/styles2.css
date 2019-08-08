@@ -1,0 +1,64 @@
+/* ----- ----- Basics ----- ----- */
+:root {
+	--backgroundColor: #D60000;
+	--elementsColor: #FFE100;
+}
+
+/* ----- ----- Loading screen ----- ----- */
+#loading_bar{
+	animation: anim_in_up 0.5s ease-out;
+	width: 400px;
+}
+#loading_star_under_big{
+	position: absolute;
+	height: 400px;
+	width: 400px;
+	background: radial-gradient(circle, var(--elementsColor) 0%, var(--elementsColor) 0%, rgba(255,255,255,0) 72%);
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	top: -119px;
+    left: 0px;
+	animation: loading_anim_wheel 5s linear infinite;
+	opacity: 0.3;
+}
+#loading_star_under_small{
+	position: absolute;
+	height: 300px;
+	width: 300px;
+	background: radial-gradient(circle, var(--elementsColor) 0%, var(--elementsColor) 0%, rgba(255,255,255,0) 72%);
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	top: -69px;
+    left: 50px;
+	animation: loading_anim_wheel 10s linear infinite reverse;
+	opacity: 0.6;
+}
+#loading_star_div{
+    overflow: hidden;
+    position: relative;
+    height: 160px;
+    width: 160px;
+	background-color: var(--elementsColor);
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+#loading_star_cover{
+	position: relative;
+	top: 0px;
+	left: -200px;
+	height: 160px;
+	width: 160px;
+	background: linear-gradient(115deg, rgba(255,255,255,0) 30%, var(--backgroundColor) 50%, rgba(255,255,255,0) 70%);
+	animation: loading_anim 3s ease-out 1s infinite;
+	opacity: 0.5;
+}
+@keyframes loading_anim {
+	0% {left: -200px;}
+	20% {left: 200px;}
+	100% {left: 200px;}
+}
+@keyframes loading_anim_wheel {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(359deg);}
+}
+#loading_text{
+	animation: anim_in_down 0.5s ease-out;
+	width: 400px;
+}

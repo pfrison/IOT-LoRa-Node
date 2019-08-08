@@ -1,0 +1,58 @@
+/* ----- ----- Basics ----- ----- */
+:root {
+	--backgroundColor: #202020;
+	--elementsColor: #DFDFDF;
+}
+
+/* ----- ----- Loading screen ----- ----- */
+#loading_bar{
+	margin: auto;
+	border: 2px solid var(--elementsColor);
+	border-radius: 15px;
+	animation: anim_in_up 0.5s ease-out;
+}
+#loading_bar_in{
+	width: 150px;
+	height: 18px;
+	margin: 5px;
+	background-color: var(--elementsColor);
+	border: 0px;
+	border-radius: 8px;
+}
+#loading_bar_mask{
+	position: absolute;
+	top: 0px;
+	width: 152px;
+	height: 22px;
+	margin: 4px;
+	overflow: hidden;
+	border-radius: 8px;
+}
+#loading_bar_element_holder{
+	position: absolute;
+	top: 0px;
+	left: -30px;
+	animation: loading_anim 0.7s linear infinite;
+}
+@keyframes loading_anim {
+  0% {left: -60px;}
+  100% {left: 0px;}
+}
+.loading_bar_element{
+	position: absolute;
+	top: 0px;
+	width: 250px;
+	height: 22px;
+	background-color: var(--backgroundColor);
+	clip-path: polygon(-10px 100%, 10px 0%, 30px 0%, 10px 100%,
+			20px 100%, 40px 0%, 60px 0%, 40px 100%,
+			50px 100%, 70px 0%, 90px 0%, 70px 100%,
+			80px 100%, 100px 0%, 120px 0%, 100px 100%,
+			110px 100%, 130px 0%, 150px 0%, 130px 100%,
+			140px 100%, 160px 0%, 180px 0%, 160px 100%,
+			170px 100%, 190px 0%, 210px 0%, 190px 100%,
+			200px 100%, 220px 0%, 240px 0%, 220px 100%);
+}
+#loading_text{
+	animation: anim_in_down 0.5s ease-out;
+}

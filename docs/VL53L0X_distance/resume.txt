@@ -1,0 +1,14 @@
+distance : 5 cm - 1,2 m
+vcc : 3-5 V
+communication : IC2 + API by ST
+accuray : 3-12%
+
+--- PINs
+Vin  : power
+2v8  : 2.8 V output (not needed) up to 100 mA
+gnd  : power
+GPIO : data is ready (output, not needed)
+SHDN : shutdown sensor (not needed ?)
+SCL  : IC2 clock
+SDA  : IC2 data
+
